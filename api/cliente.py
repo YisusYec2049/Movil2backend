@@ -34,7 +34,7 @@ def Update():
     else:
         return "Error"
 
-@ruta_clientes.route('/deletecliente/<id>', methods=['GET'])
+@ruta_clientes.route('/deletecliente/<id>', methods=['DELETE'])
 def eliminar(id):
     cliente = Cliente.query.get(id)
     db.session.delete(cliente)
